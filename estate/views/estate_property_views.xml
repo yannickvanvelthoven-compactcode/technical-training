@@ -15,6 +15,7 @@
                 <filter string="Include archived" name="archived" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
                 <separator/>
                 <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <separator/>
                 <filter
                     name="new"
                     string="New"
@@ -24,11 +25,6 @@
                     name="offer_received"
                     string="Offer Received"
                     domain="[('state', '=', 'offer_received')]"
-                />
-                <filter
-                    name="offer_accepted"
-                    string="Offer Accepted"
-                    domain="[('state', '=', 'offer_accepted')]"
                 />
                 <group string="Group By" name="groupby">
                     <filter
