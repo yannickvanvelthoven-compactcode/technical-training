@@ -71,6 +71,13 @@
                                 </group>
                             </page>
                         </notebook>
+                        <notebook>
+                            <page string="Other info">
+                                <group>
+                                    <field name="property_type_id"/>
+                                </group>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -88,6 +95,7 @@
                     <field name="expected_price"/>
                     <field name="selling_price"/>
                     <field name="date_availability"/>
+                    <field name="property_type_id"/>
                 </list>
             </field>
         </record>
