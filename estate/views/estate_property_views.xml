@@ -70,8 +70,6 @@
                                     <field name="garden_orientation"/>
                                 </group>
                             </page>
-                        </notebook>
-                        <notebook>
                             <page string="Other info">
                                 <group>
                                     <field name="property_type_id"/>
