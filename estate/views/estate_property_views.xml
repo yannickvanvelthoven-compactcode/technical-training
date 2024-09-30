@@ -21,9 +21,9 @@
                 <form string="Property">
                     <sheet>
                         <group>
-                            <group>
-                                <field name="name"/>
-                            </group>
+                            <h1 class="mb32">
+                                <field name="name" class="mb16"/>
+                            </h1>
                             <group>
                                 <field name="postcode"/>
                                 <field name="date_availability"/>
