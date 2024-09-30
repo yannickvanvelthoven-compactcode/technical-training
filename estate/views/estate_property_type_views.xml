@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <record id="estate_property_type_action" model="ir.actions.act_window">
-            <field name="name">Estate property type action</field>
+            <field name="name">Estate property type</field>
             <field name="res_model">estate.property.type</field>
             <field name="view_mode">list,form</field>
         </record>
