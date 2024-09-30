@@ -22,3 +22,4 @@ class EstateProperty(models.Model):
         selection=[('north', 'North'), ('south', 'South'), ('east', 'East'), ('west', 'West')],
         help="Type is used to define which orientation is used"
     )
+    active = fields.Boolean(default=True)
