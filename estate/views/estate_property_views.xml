@@ -13,7 +13,7 @@
                             </group>
                             <group>
                                 <field name="postcode"/>
-                                <field name="available_from"/>
+                                <field name="date_availability"/>
                                 <field name="expected_price"/>
                                 <field name="selling_price"/>
                             </group>
@@ -21,6 +21,9 @@
                         <notebook>
                             <page string="Description">
                                 <field name="description"/>
+                                <field name="bedrooms"/>
+                                <field name="living_area"/>
+                                <field name="facades"/>
                             </page>
                         </notebook>
                     </sheet>
