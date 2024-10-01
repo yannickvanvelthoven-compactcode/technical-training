@@ -10,8 +10,8 @@
                     <field name="partner_id"/>
                     <field name="validity"/>
                     <field name="date_deadline"/>
-                    <button type="action" name="%(estate.property.offer.action_accept)d" string="Accept"/>
-                    <button type="action" name="%(estate.property.offer.action_refuse)d" string="Refuse"/>
+                    <button type="action" name="action_accept" string="Accept"/>
+                    <button type="action" name="action_refuse" string="Refuse"/>
                     <field name="status"/>
                 </list>
             </field>
