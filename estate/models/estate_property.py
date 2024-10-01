@@ -91,6 +91,12 @@ class EstateProperty(models.Model):
     def offer_accepted(self):
         return 'accepted' in self.offer_ids.mapped('status')
 
+    def show_state_buttons(self):
+        if self.state == 'sold' or self.state == 'cancelled':
+            return False
+
+        return True
+
     def action_sold(self):
         for record in self:
             if record.state == 'cancelled':
