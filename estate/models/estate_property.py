@@ -78,7 +78,7 @@ class EstateProperty(models.Model):
             self.garden_area = 10
             self.garden_orientation = 'north'
 
-    @api.constraint('selling_price')
+    @api.constrains('selling_price')
     def _check_selling_price(self):
         if not self.offer_accepted:
             raise ValidationError('No offers accepted yet!')
