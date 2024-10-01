@@ -80,7 +80,7 @@ class EstateProperty(models.Model):
 
     @api.constrains('selling_price')
     def _check_selling_price(self):
-        if not self.offer_accepted:
+        if not self.offer_accepted():
             raise ValidationError('No offers accepted yet!')
 
         for record in self:
