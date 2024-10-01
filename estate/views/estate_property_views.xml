@@ -43,7 +43,7 @@
             <field name="arch" type="xml">
                 <form string="Property">
                     <header>
-                        <group invisible="not show_state_buttons">
+                        <group invisible="not show_state_buttons()">
                             <button type="object" name="action_sold" string="Sold"/>
                             <button type="object" name="action_cancel" string="Cancel"/>
                         </group>
