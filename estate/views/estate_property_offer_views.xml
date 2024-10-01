@@ -10,8 +10,8 @@
                     <field name="partner_id"/>
                     <field name="validity"/>
                     <field name="date_deadline"/>
-                    <button type="action" name="action_accept" string="Accept"/>
-                    <button type="action" name="action_refuse" string="Refuse"/>
+                    <button type="object" name="action_accept" string="Accept"/>
+                    <button type="object" name="action_refuse" string="Refuse"/>
                     <field name="status"/>
                 </list>
             </field>
