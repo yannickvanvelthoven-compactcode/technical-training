@@ -4,6 +4,7 @@ from odoo.exceptions import UserError
 class EstatePropertyOffer(models.Model):
     _name = "estate.property.offer"
     _description = "Estate property offer Model"
+    _order = "price desc"
 
     price = fields.Float()
     partner_id = fields.Many2one("res.partner", string="Partner", required=True)
