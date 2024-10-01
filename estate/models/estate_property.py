@@ -84,7 +84,7 @@ class EstateProperty(models.Model):
         #     raise ValidationError('No offers accepted yet!')
 
         for record in self:
-            if float_compare(record.selling_price, (record.expected_price * 0.9), precision_rounding=None) < 0:
+            if float_compare(record.selling_price, (record.expected_price * 0.9), precision_rounding=0.5) < 0:
                 raise ValidationError('Selling price is too low!')
 
     def offer_accepted(self):
