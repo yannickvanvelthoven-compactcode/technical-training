@@ -5,3 +5,8 @@ class EstatePropertyType(models.Model):
     _description = "Estate property type Model"
 
     name = fields.Char(required=True)
+
+    _sql_constraints = [
+        ('name_unique', 'unique(name)',
+         'A property type must be unique.')
+    ]

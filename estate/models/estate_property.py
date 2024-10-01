@@ -49,6 +49,13 @@ class EstateProperty(models.Model):
     tag_ids = fields.Many2many("estate.property.tags")
     offer_ids = fields.One2many("estate.property.offer", "property_id")
 
+    _sql_constraints = [
+        ('check_expected_price', 'CHECK(expected_price > 0)',
+         'The Expected price should be greater than 0.'),
+        ('check_selling_price', 'CHECK(selling_price > 0)',
+         'The Selling price should be greater than 0.'),
+    ]
+
     @api.depends('living_area', 'garden_area')
     def _compute_total_area(self):
         for record in self:
@@ -77,10 +84,5 @@ class EstateProperty(models.Model):
 
             record.state = 'sold'
 
-        return True
-
     def action_cancel(self):
-        for record in self:
-            record.state = 'cancelled'
-
-        return True
+        self.state = 'cancelled'
