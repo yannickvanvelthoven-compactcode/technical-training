@@ -1,5 +1,6 @@
 from odoo import api, fields, models
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools import float_compare
 
 class EstateProperty(models.Model):
     _name = "estate.property"
@@ -76,6 +77,18 @@ class EstateProperty(models.Model):
         if self.garden:
             self.garden_area = 10
             self.garden_orientation = 'north'
+
+    @api.constraint('selling_price')
+    def _check_selling_price(self):
+        if not self.offer_accepted:
+            raise ValidationError('No offers accepted yet!')
+
+        for record in self:
+            if float_compare(record.selling_price, (record.expected_price * 0.9)) < 0:
+                raise ValidationError('Selling price is too low!')
+
+    def offer_accepted(self):
+        return 'accepted' in self.offer_ids.mapped('status')
 
     def action_sold(self):
         for record in self:
